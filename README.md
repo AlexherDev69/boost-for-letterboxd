@@ -2,8 +2,6 @@
 
 A Chrome extension that puts Letterboxd front and center in your Google searches.
 
-![Promo](assets/promo_large_1400x560.png)
-
 ## Features
 
 **Letterboxd Banner** — When you search for a movie, director or actor on Google, a direct link to Letterboxd appears at the top of the results with a smooth slide-in animation.
@@ -17,6 +15,7 @@ A Chrome extension that puts Letterboxd front and center in your Google searches
 **Query Cleaning** — Noise words and detection keywords are stripped from the search query before sending it to Letterboxd. For example, "oppenheimer director" becomes "oppenheimer".
 
 **Popup Panel** — Click the extension icon to access:
+
 - Recent search history (last 20 searches, deduplicated)
 - Feature toggles (banner, context menu)
 - Language toggles (enable/disable detection per language)
@@ -26,12 +25,6 @@ A Chrome extension that puts Letterboxd front and center in your Google searches
 **Accessibility** — Configurable font size (normal, large, extra large), high contrast mode, and animation toggle. Respects `prefers-reduced-motion` and `prefers-color-scheme` automatically.
 
 **Responsive** — The banner adapts to mobile and smaller viewports.
-
-## Screenshots
-
-| Letterboxd banner on Google | Right-click context menu |
-|---|---|
-| ![Banner](assets/screenshot_1_banner.png) | ![Context Menu](assets/screenshot_2_contextmenu.png) |
 
 ## Installation
 
@@ -87,14 +80,14 @@ static/             # manifest.json, popup.html/css, style.css, icons
 
 ## Supported languages
 
-| Language | Keywords | Example |
-|---|---|---|
-| English | film, movie, director, trailer, streaming... | "oppenheimer movie" |
-| French | cinéma, acteur, réalisateur, bande-annonce... | "oppenheimer film" |
-| German | kino, schauspieler, regisseur, filmkritik... | "oppenheimer kinofilm" |
-| Spanish | película, director, estreno, cartelera... | "oppenheimer película" |
-| Italian | attore, regista, recensione, guardare... | "oppenheimer film" |
-| Portuguese | filme, diretor, elenco, assistir... | "oppenheimer filme" |
+| Language   | Keywords                                      | Example                |
+| ---------- | --------------------------------------------- | ---------------------- |
+| English    | film, movie, director, trailer, streaming...  | "oppenheimer movie"    |
+| French     | cinéma, acteur, réalisateur, bande-annonce... | "oppenheimer film"     |
+| German     | kino, schauspieler, regisseur, filmkritik...  | "oppenheimer kinofilm" |
+| Spanish    | película, director, estreno, cartelera...     | "oppenheimer película" |
+| Italian    | attore, regista, recensione, guardare...      | "oppenheimer film"     |
+| Portuguese | filme, diretor, elenco, assistir...           | "oppenheimer filme"    |
 
 Platform keywords (Netflix, Disney+, HBO, etc.) are always active regardless of language settings.
 

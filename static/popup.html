@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+  <title>Boost for Letterboxd</title>
+</head>
+<body>
+  <!-- Header -->
+  <header class="popup-header">
+    <img src="icon48.png" alt="Logo" class="popup-logo">
+    <h1 class="popup-title">Boost for Letterboxd</h1>
+  </header>
+
+  <!-- Search History -->
+  <section class="popup-section">
+    <div class="section-header">
+      <h2>Recent searches</h2>
+      <button id="clear-history" class="btn-clear" title="Clear history">Clear</button>
+    </div>
+    <ul id="history-list" class="history-list">
+      <li class="history-empty">No searches yet</li>
+    </ul>
+  </section>
+
+  <!-- Features -->
+  <section class="popup-section">
+    <h2>Features</h2>
+    <div class="setting-row">
+      <label for="banner-enabled">Search banner</label>
+      <input type="checkbox" id="banner-enabled" checked>
+    </div>
+    <div class="setting-row">
+      <label for="context-menu-enabled">Context menu <span class="setting-hint">(right click search)</span></label>
+      <input type="checkbox" id="context-menu-enabled" checked>
+    </div>
+  </section>
+
+  <!-- Languages -->
+  <section class="popup-section">
+    <h2>Languages</h2>
+    <div class="lang-grid">
+      <label class="toggle-label">
+        <input type="checkbox" id="lang-en" checked> English
+      </label>
+      <label class="toggle-label">
+        <input type="checkbox" id="lang-fr" checked> Français
+      </label>
+      <label class="toggle-label">
+        <input type="checkbox" id="lang-de" checked> Deutsch
+      </label>
+      <label class="toggle-label">
+        <input type="checkbox" id="lang-es" checked> Español
+      </label>
+      <label class="toggle-label">
+        <input type="checkbox" id="lang-it" checked> Italiano
+      </label>
+      <label class="toggle-label">
+        <input type="checkbox" id="lang-pt" checked> Português
+      </label>
+    </div>
+  </section>
+
+  <!-- Accessibility -->
+  <section class="popup-section">
+    <h2>Accessibility</h2>
+    <div class="setting-row">
+      <label for="font-size">Font size</label>
+      <select id="font-size">
+        <option value="normal">Normal</option>
+        <option value="large">Large</option>
+        <option value="xlarge">Extra large</option>
+      </select>
+    </div>
+    <div class="setting-row">
+      <label for="high-contrast">High contrast</label>
+      <input type="checkbox" id="high-contrast">
+    </div>
+    <div class="setting-row">
+      <label for="animations">Banner animation</label>
+      <input type="checkbox" id="animations" checked>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="popup-footer">
+    <div class="footer-links">
+      <a href="https://github.com/AlexherDev69/boost-for-letterboxd" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+      <a href="https://x.com/Alexher__" target="_blank" rel="noopener noreferrer" class="footer-link">X / Twitter</a>
+    </div>
+    <span class="version" id="version-text">v1.2</span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

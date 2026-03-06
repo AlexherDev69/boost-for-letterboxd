@@ -1,0 +1,246 @@
+/* ── Base (light mode) ── */
+.lb-boost-banner {
+  margin: 0 0 10px 0;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f0f2f5 100%);
+  border: 1px solid rgba(0, 180, 60, 0.3);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.lb-boost-banner:hover {
+  border-color: rgba(0, 180, 60, 0.6);
+  box-shadow:
+    0 4px 16px rgba(0, 180, 60, 0.1),
+    0 0 0 1px rgba(0, 180, 60, 0.08);
+  transform: translateY(-1px);
+}
+
+.lb-boost-link {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  text-decoration: none !important;
+  color: #1a1a1a !important;
+  gap: 14px;
+}
+
+.lb-boost-link:visited {
+  color: #1a1a1a !important;
+}
+
+.lb-boost-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.lb-boost-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  gap: 3px;
+}
+
+.lb-boost-text strong {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 0.01em;
+}
+
+.lb-boost-sub {
+  font-size: 12px;
+  color: #5f6368;
+  letter-spacing: 0.02em;
+}
+
+.lb-boost-arrow {
+  font-size: 18px;
+  color: #00b43c;
+  font-weight: bold;
+  margin-left: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(0, 180, 60, 0.08);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.lb-boost-banner:hover .lb-boost-arrow {
+  background: rgba(0, 180, 60, 0.15);
+  transform: translateX(3px);
+}
+
+/* ── Dark mode ── */
+@media (prefers-color-scheme: dark) {
+  .lb-boost-banner {
+    background: linear-gradient(135deg, #1c1e22 0%, #262a32 50%, #1c2028 100%);
+    border-color: rgba(0, 224, 84, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .lb-boost-banner:hover {
+    border-color: rgba(0, 224, 84, 0.6);
+    box-shadow:
+      0 4px 20px rgba(0, 224, 84, 0.15),
+      0 0 0 1px rgba(0, 224, 84, 0.1);
+  }
+
+  .lb-boost-link,
+  .lb-boost-link:visited {
+    color: #fff !important;
+  }
+
+  .lb-boost-text strong {
+    color: #f0f2f5;
+  }
+
+  .lb-boost-sub {
+    color: #8899aa;
+  }
+
+  .lb-boost-arrow {
+    color: #00E054;
+    background: rgba(0, 224, 84, 0.1);
+  }
+
+  .lb-boost-banner:hover .lb-boost-arrow {
+    background: rgba(0, 224, 84, 0.2);
+  }
+
+  .lb-boost-logo {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* ── Accessibility: Large font ── */
+.lb-boost-large .lb-boost-text strong {
+  font-size: 16px;
+}
+
+.lb-boost-large .lb-boost-sub {
+  font-size: 14px;
+}
+
+/* ── Accessibility: Extra large font ── */
+.lb-boost-xlarge .lb-boost-text strong {
+  font-size: 18px;
+}
+
+.lb-boost-xlarge .lb-boost-sub {
+  font-size: 15px;
+}
+
+.lb-boost-xlarge .lb-boost-logo {
+  width: 42px;
+  height: 42px;
+}
+
+/* ── Accessibility: High contrast ── */
+.lb-boost-high-contrast .lb-boost-banner {
+  border-width: 2px;
+  border-color: #00E054;
+  box-shadow: none;
+}
+
+.lb-boost-high-contrast .lb-boost-text strong {
+  color: #000;
+}
+
+.lb-boost-high-contrast .lb-boost-sub {
+  color: #333;
+}
+
+.lb-boost-high-contrast .lb-boost-arrow {
+  color: #000;
+  background: #00E054;
+}
+
+@media (prefers-color-scheme: dark) {
+  .lb-boost-high-contrast .lb-boost-banner {
+    background: #000;
+    border-color: #00E054;
+  }
+
+  .lb-boost-high-contrast .lb-boost-text strong {
+    color: #fff;
+  }
+
+  .lb-boost-high-contrast .lb-boost-sub {
+    color: #ccc;
+  }
+
+  .lb-boost-high-contrast .lb-boost-arrow {
+    color: #000;
+    background: #00E054;
+  }
+}
+
+/* ── Animation: slide-in ── */
+@keyframes lb-boost-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lb-boost-animate .lb-boost-banner {
+  animation: lb-boost-slide-in 0.4s ease-out;
+}
+
+/* ── Respect reduced motion preference ── */
+@media (prefers-reduced-motion: reduce) {
+  .lb-boost-animate .lb-boost-banner {
+    animation: none;
+  }
+}
+
+/* ── Mobile responsive ── */
+@media (max-width: 600px) {
+  .lb-boost-banner {
+    margin: 0 0 8px 0;
+    border-radius: 10px;
+  }
+
+  .lb-boost-link {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .lb-boost-logo {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+  }
+
+  .lb-boost-text strong {
+    font-size: 13px;
+  }
+
+  .lb-boost-sub {
+    font-size: 11px;
+  }
+
+  .lb-boost-arrow {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+    margin-left: 4px;
+  }
+}

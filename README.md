@@ -2,7 +2,7 @@
 
 A Chrome extension that puts Letterboxd front and center in your Google searches.
 
-![Promo](assets/promo_large_1400x560.png)
+
 
 ## Features
 
@@ -13,12 +13,7 @@ A Chrome extension that puts Letterboxd front and center in your Google searches
 **Right-Click Search** — Highlight any text on any website, right-click, and choose "Search on Letterboxd" to jump straight there.
 
 **Smart Detection** — The extension detects cinema-related searches using keywords in French and English (film, actor, Netflix, review, streaming, etc.).
-
-## Screenshots
-
-| Letterboxd banner on Google | Right-click context menu |
-|---|---|
-| ![Banner](assets/screenshot_1_banner.png) | ![Context Menu](assets/screenshot_2_contextmenu.png) |
+|
 
 ## Installation
 
